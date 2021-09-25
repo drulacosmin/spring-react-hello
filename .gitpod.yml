@@ -1,0 +1,8 @@
+# Commands to start on workspace startup
+tasks:
+  - init: cd /server && mvn spring-boot:run
+    command: cd /client && npm install && npm run
+# Ports to expose on workspace startup
+ports:
+  - port: 3000
+    onOpen: open-preview
